@@ -6,7 +6,9 @@ namespace Laby
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Lab1.Zad1.Run();
+            //Lab1.Zad2.Run();
+            Lab1.Zad3.Run();
         }
     }
 }
