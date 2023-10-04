@@ -33,14 +33,33 @@ namespace Laby.Lab1
                 przeliczenie = Convert.ToInt32(Console.ReadLine());
             } while (przeliczenie < 0 || przeliczenie > 4);
 
-            int mnoznik;
-            // zle obliczenia dalem ale czasu nie ma
+            float mnoznik;
             if (jednostka == przeliczenie) mnoznik = 1;
-            else if (jednostka < przeliczenie) mnoznik = 1/(przeliczenie-jednostka);
-            else mnoznik = (jednostka - przeliczenie) * 10;
+            else if (jednostka < przeliczenie)
+            {
+                int i = 0, razy = przeliczenie-jednostka;
+                mnoznik = 1;
+                while(i < razy)
+                {
+                    mnoznik /= 10;
+                    i++;
+                }
+                
+            }
+            else
+            {
+                int i = 0, razy = jednostka - przeliczenie;
+                mnoznik = 1;
+                while (i < razy)
+                {
+                    mnoznik *= 10;
+                    i++;
+                }
+            }
+                
 
             Console.WriteLine("Przeliczona liczba:");
-            Console.WriteLine(x * mnoznik);
+            Console.WriteLine((float)(x * mnoznik));
 
 
         }
