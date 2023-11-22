@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace Lab2_3
+namespace TestyJednostkowe
 {
     public class Tests
     {

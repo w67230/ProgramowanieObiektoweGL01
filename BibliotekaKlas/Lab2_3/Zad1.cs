@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BibliotekaKlas.Lab2
+namespace BibliotekaKlas.Lab2_3
 {
     public class Licz
     {

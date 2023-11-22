@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laby", "Laby\Laby.csproj", "{8457B530-7A9F-4FCC-8325-C442536FDF8A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2-3", "..\Lab2-3\Lab2-3.csproj", "{B17B047A-DA6B-4D1C-A30A-C1EEB5948526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestyJednostkowe", "..\Lab2-3\TestyJednostkowe.csproj", "{B17B047A-DA6B-4D1C-A30A-C1EEB5948526}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotekaKlas", "..\BibliotekaKlas\BibliotekaKlas.csproj", "{BE29C6C7-2102-43B1-94FF-9308D4569560}"
 EndProject
