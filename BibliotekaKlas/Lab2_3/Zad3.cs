@@ -13,6 +13,7 @@ namespace BibliotekaKlas.Lab2_3
         private float predkoscSamochodu;
         private float przebieg;
         private StanSilnika stanSilnika;
+        private int iloscCheckow = 1;
 
         public Samochód(string marka, string model, int rokProdukcji)
         {
@@ -54,7 +55,12 @@ namespace BibliotekaKlas.Lab2_3
         public float przejedzPodanyDystans(float metry)
         {
             this.przebieg += metry;
-            if (this.przebieg / 10000 > 1) this.stanSilnika = StanSilnika.CHECK_ENGINE;
+            if (this.przebieg/ this.iloscCheckow > 10000)
+            {
+                this.stanSilnika = StanSilnika.CHECK_ENGINE;
+                this.iloscCheckow++;
+            }
+                
             return metry / this.predkoscSamochodu;
         }
 
