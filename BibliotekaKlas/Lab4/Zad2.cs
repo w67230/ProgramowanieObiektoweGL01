@@ -74,17 +74,21 @@ namespace BibliotekaKlas.Lab4
 
         public override bool CanGoAloneToHome()
         {
+            if (this.GetAge() > 11) return true;
             return mozeSamWracacDoDomu;
         }
 
+        // dla mnie setSchool i changeSchool to to samo ale ok
+        // jak tak kaze zadanie to zrobie 2 inne
         public void SetSchool(string school)
         {
             this.szkola = school;
         }
 
-        public void ChangeSchool(string school)
+        public string ChangeSchool(string school)
         {
             this.SetSchool(school);
+            return school;
         }
 
         public void SetCanGoHomeAlone(bool moze)
@@ -94,7 +98,12 @@ namespace BibliotekaKlas.Lab4
 
         public string Info()
         {
-            return "Nie moze sam wracac ponizej 12 lat chyba ze ma pozwolenie";
+            return this.CanGoAloneToHome() ? "Moze isc sam do domu" : "Nie moze isc sam do domu";
+        }
+
+        public string czyMaPozwolenie()
+        {
+            return this.mozeSamWracacDoDomu ? "Ma pozwolenie" : "Nie pytal";
         }
     }
 
