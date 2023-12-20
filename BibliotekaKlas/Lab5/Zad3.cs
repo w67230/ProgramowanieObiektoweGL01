@@ -74,11 +74,11 @@ namespace BibliotekaKlas.Lab5
 
     public interface IBaseRepository<T, TEntity> where T : InterfejsID<TEntity>
     {
-        public void Create();
-        public void Update();
-        public void GetAll();
-        public void Get();
-        public void Delete();
+        public void Create(T item);
+        public void Update(T item);
+        public List<T> GetAll();
+        public T Get();
+        public void Delete(TEntity id);
     }
 
     public interface IBookRepository : IBaseRepository<Book, Int32>

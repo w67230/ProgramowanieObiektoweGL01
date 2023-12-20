@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestyJednostkowe", "..\Lab2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotekaKlas", "..\BibliotekaKlas\BibliotekaKlas.csproj", "{BE29C6C7-2102-43B1-94FF-9308D4569560}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab7", "Lab7\Lab7.csproj", "{26566C69-C501-4872-9170-7EEA0532EF43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BE29C6C7-2102-43B1-94FF-9308D4569560}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE29C6C7-2102-43B1-94FF-9308D4569560}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE29C6C7-2102-43B1-94FF-9308D4569560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26566C69-C501-4872-9170-7EEA0532EF43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26566C69-C501-4872-9170-7EEA0532EF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26566C69-C501-4872-9170-7EEA0532EF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26566C69-C501-4872-9170-7EEA0532EF43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
