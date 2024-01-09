@@ -51,6 +51,12 @@ namespace BibliotekaKlas.Lab5
         public string imie;
         public string nazwisko;
         public List<Book> listaWypozyczonychKsiazek = new List<Book>();
+
+        public Person(string pesel)
+        {
+            this.pesel = pesel;
+        }
+
         public DateTime getDate()
         {
             return this.dataUrodzenia;
@@ -77,7 +83,7 @@ namespace BibliotekaKlas.Lab5
         public void Create(T item);
         public void Update(T item);
         public List<T> GetAll();
-        public T Get();
+        public T Get(TEntity id);
         public void Delete(TEntity id);
     }
 

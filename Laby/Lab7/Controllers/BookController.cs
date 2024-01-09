@@ -24,7 +24,7 @@ namespace Lab7.Controllers
         [HttpGet]
         public Book Get(int id)
         {
-            return this.bookRepository.Get();
+            return this.bookRepository.Get(id);
         }
 
         [HttpPost]
