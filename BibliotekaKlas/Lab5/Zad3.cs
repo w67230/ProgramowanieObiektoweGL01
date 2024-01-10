@@ -18,10 +18,10 @@ namespace BibliotekaKlas.Lab5
 
     public class Book : InterfejsID<Int32>, InterfejsDataUtworzenia
     {
-        private int id;
-        public string tytul;
-        public Person autor;
-        private DateTime dataUtworzenia;
+        private int id { get; set; }
+        public string tytul { get; set; }
+        public Person autor { get; set; }
+        public DateTime dataUtworzenia { get; set; }
 
         public DateTime getDate()
         {
@@ -48,9 +48,9 @@ namespace BibliotekaKlas.Lab5
     {
         private string pesel;
         private DateTime dataUrodzenia;
-        public string imie;
-        public string nazwisko;
-        public List<Book> listaWypozyczonychKsiazek = new List<Book>();
+        public string imie { get; set; }
+        public string nazwisko { get; set; }
+        public List<Book> listaWypozyczonychKsiazek { get; set; } = new List<Book>();
 
         public Person(string pesel)
         {

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 using BibliotekaKlas.Lab5;
 using BibliotekaKlas.Lab6;
+using BibliotekaKlas.Lab8;
 
 namespace Lab7
 {
@@ -30,8 +31,12 @@ namespace Lab7
             services.AddControllers();
             services.AddSwaggerGen();
 
-            services.AddSingleton<IBookRepository, BookRepository>();
+            //services.AddSingleton<IBookRepository, BookRepository>();
             services.AddSingleton<IPersonRepository, PersonRepository>();
+
+            services.AddTransient<IBookRepository, FileBookRepository>();
+
+            //services.AddDbContext<LibraryDbContext>();
 
         }
 
