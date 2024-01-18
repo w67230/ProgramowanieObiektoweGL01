@@ -20,7 +20,7 @@ namespace BibliotekaKlas.Lab5
     {
         private int id { get; set; }
         public string tytul { get; set; }
-        public Person autor { get; set; }
+        public Person autor { get; set; } = new Person();
         public DateTime dataUtworzenia { get; set; }
 
         public DateTime getDate()
@@ -46,16 +46,11 @@ namespace BibliotekaKlas.Lab5
 
     public class Person : InterfejsID<String>, InterfejsDataUtworzenia
     {
-        private string pesel;
+        private string pesel { get; set; }
         private DateTime dataUrodzenia;
         public string imie { get; set; }
         public string nazwisko { get; set; }
         public List<Book> listaWypozyczonychKsiazek { get; set; } = new List<Book>();
-
-        public Person(string pesel)
-        {
-            this.pesel = pesel;
-        }
 
         public DateTime getDate()
         {

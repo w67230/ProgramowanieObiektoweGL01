@@ -91,7 +91,7 @@ namespace BibliotekaKlas.Lab6
                     return person;
                 }
             }
-            Person nowa = new Person(id);
+            Person nowa = new Person();
             return nowa;
         }
 

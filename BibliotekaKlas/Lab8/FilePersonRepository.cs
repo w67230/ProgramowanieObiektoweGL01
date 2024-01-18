@@ -7,51 +7,52 @@ using System.Text.Json;
 
 namespace BibliotekaKlas.Lab8
 {
-    public class FileBookRepository : IBookRepository
+    public class FilePersonRepository : IPersonRepository
     {
-        const string fileName = "books.json";
+        const string fileName = "persons.json";
 
-        public void Create(Book item)
+        public void Create(Person item)
         {
             var list = this.GetAll();
-            item.setId(list.Count + 1);
+            Random random = new Random();
+            item.setId(Convert.ToString(random.Next(0, 10000000)));
             list.Add(item);
 
             this.WriteFile(list);
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
             var data = this.GetAll();
-            foreach (Book book in data)
+            foreach (Person person in data)
             {
-                if (book.getId() == id)
+                if (person.getId() == id)
                 {
-                    data.Remove(book);
+                    data.Remove(person);
                     break;
                 }
             }
             this.WriteFile(data);
         }
 
-        public Book Get(int id)
+        public Person Get(string id)
         {
-            foreach(Book book in this.GetAll())
+            foreach (Person person in this.GetAll())
             {
-                if(book.getId() == id)
+                if (person.getId() == id)
                 {
-                    return book;
+                    return person;
                 }
             }
-            return new Book();
+            return new Person();
         }
 
-        public List<Book> GetAll()
+        public List<Person> GetAll()
         {
             return this.ReadFile();
         }
 
-        public void Update(Book item)
+        public void Update(Person item)
         {
             var data = this.GetAll();
             for (int i = 0; i < data.Count; i++)
@@ -65,18 +66,18 @@ namespace BibliotekaKlas.Lab8
             this.WriteFile(data);
         }
 
-        private List<Book> ReadFile()
+        private List<Person> ReadFile()
         {
             if (File.Exists(fileName))
             {
                 string content = File.ReadAllText(fileName);
-                if(content == null || content == "") return new List<Book>();
-                return JsonSerializer.Deserialize<List<Book>>(content);
+                if (content == null || content == "") return new List<Person>();
+                return JsonSerializer.Deserialize<List<Person>>(content);
             }
-            return new List<Book>();
+            return new List<Person>();
         }
 
-        private void WriteFile(List<Book> data)
+        private void WriteFile(List<Person> data)
         {
             string content = JsonSerializer.Serialize(data);
 
