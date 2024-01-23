@@ -8,32 +8,39 @@ using BibliotekaKlas.Lab5;
 namespace BibliotekaKlas.Lab8
 {
     [Table("BorrowedBooks")]
-    public class BorrowedBook : InterfejsID<Int32>, InterfejsDataUtworzenia
+    public class BorrowedBook : InterfejsID<long>, InterfejsDataUtworzenia
     {
         [Key]
         public long id { get; set; }
 
         public DateTime CreationTime { get; set; } = DateTime.Now;
 
+        public int BookId { get; set; }
+        [ForeignKey(nameof(BookId))]
+        public Book Book { get; set; }
+
+        public long PersonId { get; set; }
+        public Person Person { get; set; }
+
 
         public DateTime getDate()
         {
-            throw new NotImplementedException();
+            return this.CreationTime;
         }
 
-        public int getId()
+        public long getId()
         {
-            throw new NotImplementedException();
+            return this.id;
         }
 
         public void setDate(DateTime date)
         {
-            throw new NotImplementedException();
+            this.CreationTime = date;
         }
 
-        public void setId(int t)
+        public void setId(long t)
         {
-            throw new NotImplementedException();
+            this.id = t;
         }
     }
 }

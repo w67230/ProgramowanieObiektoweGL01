@@ -34,7 +34,10 @@ namespace Lab7
             //services.AddSingleton<IBookRepository, BookRepository>();
             services.AddTransient<IPersonRepository, FilePersonRepository>();
 
-            services.AddTransient<IBookRepository, FileBookRepository>();
+            //services.AddTransient<IBookRepository, FileBookRepository>();
+            services.AddTransient<IBookRepository, DbBookRepository>();
+
+            services.AddDbContext<LibraryDbContext>();
 
             //services.AddDbContext<LibraryDbContext>();
 
