@@ -32,10 +32,11 @@ namespace Lab7
             services.AddSwaggerGen();
 
             //services.AddSingleton<IBookRepository, BookRepository>();
-            services.AddTransient<IPersonRepository, FilePersonRepository>();
+            //services.AddTransient<IPersonRepository, FilePersonRepository>();
 
             //services.AddTransient<IBookRepository, FileBookRepository>();
             services.AddTransient<IBookRepository, DbBookRepository>();
+            services.AddTransient<IPersonRepository, DbPersonRepository>();
 
             services.AddDbContext<LibraryDbContext>();
 

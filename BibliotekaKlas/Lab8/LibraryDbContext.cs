@@ -8,7 +8,7 @@ namespace BibliotekaKlas.Lab8
 {
     public class LibraryDbContext : DbContext
     {
-        private readonly string DbPath = "";
+        private readonly string DbPath = "F:\\ProgramowanieObiektoweGL01\\Laby\\Lab7";
 
 
         public DbSet<Book> Books { get; set; }
